@@ -1,6 +1,4 @@
-def strcture
-new.node=new
-lass Node:
+class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -11,7 +9,6 @@ class Queue:
         self.rear = None
 
     def enqueue(self, data):
-        
         new_node = Node(data)
         if self.rear is None: 
             self.front = self.rear = new_node
@@ -20,16 +17,15 @@ class Queue:
             self.rear = new_node
 
     def display(self):
-    
         current = self.front
         while current:
             print(current.data, end=" -> ")
             current = current.next
         print("None")
 
-#example
+# Example Usage:
 queue = Queue()
 queue.enqueue(10)
 queue.enqueue(20)
 queue.enqueue(30)
-queue.display()  
+queue.display()
